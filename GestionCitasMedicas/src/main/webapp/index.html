@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Iniciar Sesión</title>
+<script src="script/user.js"></script>
+</head>
+<body>
+	<h1>Gestión de citas médicas</h1>
+	<form>
+		<fieldset name="registro">
+			<legend>Registrar nuevo usuario</legend>
+			<table>
+				<tr>
+					<td><input type="text" name="nombre" placeholder="Nombre"><br>
+					</td>
+					<td><input type="text" name="apellidos"
+						placeholder="Apellidos"><br></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="dniRegistro" placeholder="DNI"><br>
+					</td>
+					<td><input type="button" value="Registrar"
+						onclick="registrar(this.form)"></td>
+				</tr>
+			</table>
+		</fieldset>
+		<br>
+		<fieldset name="login">
+			<legend>Iniciar sesión</legend>
+			<table>
+				<tr>
+					<td><input type="text" name="dniLogin" placeholder="DNI"><br>
+					</td>
+					<td><input type="button" value="Acceder"
+						onclick="inicioSesion(this.form)"></td>
+				</tr>
+			</table>
+		</fieldset>
+		<p id="error"></p>
+	</form>
+</body>
+</html>
