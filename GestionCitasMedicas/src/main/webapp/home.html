@@ -3,12 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Citas Médicas</title>
+<script src="script/funciones.js"></script>
 </head>
-<body>
+<body onload="prueba()">
 	<h1>Citas médicas</h1>
+	<p id="textoUsuario"></p>
 	<form>
 		<fieldset>
-		<legend>Crear cita</legend>
+			<legend>Crear cita</legend>
 			<table>
 				<tr>
 					<td><input type="text" name="nombre" placeholder="Nombre"><br>
@@ -19,8 +21,7 @@
 				<tr>
 					<td><input type="text" name="dniRegistro" placeholder="DNI"><br>
 					</td>
-					<td><input type="button" value="Registrar"
-						onclick="registrar(this.form)"></td>
+					<td><input type="button" value="Registrar" onclick="crearCita(this.form)"></td>
 				</tr>
 			</table>
 		</fieldset>

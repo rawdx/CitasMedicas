@@ -18,7 +18,7 @@
 						placeholder="Apellidos"><br></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="dniRegistro" placeholder="DNI"><br>
+					<td><input type="text" name="dniRegistro" placeholder="DNI" pattern="/^[0-9]{8}[a-zA-Z]$/"><br>
 					</td>
 					<td><input type="button" value="Registrar"
 						onclick="registrar(this.form)"></td>
