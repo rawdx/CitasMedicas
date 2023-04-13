@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Citas Médicas</title>
-<script src="script/funciones.js"></script>
+<script src="script/home.js"></script>
 </head>
-<body onload="prueba()">
+<body onload="inicio()">
 	<h1>Citas médicas</h1>
 	<p id="textoUsuario"></p>
 	<form>
@@ -13,18 +13,31 @@
 			<legend>Crear cita</legend>
 			<table>
 				<tr>
-					<td><input type="text" name="nombre" placeholder="Nombre"><br>
-					</td>
-					<td><input type="text" name="apellidos"
-						placeholder="Apellidos"><br></td>
+					<td><label>Elige un centro:</label></td>
+					<td><select id="selectCentros">
+					</select></td>
 				</tr>
 				<tr>
-					<td><input type="text" name="dniRegistro" placeholder="DNI"><br>
-					</td>
-					<td><input type="button" value="Registrar" onclick="crearCita(this.form)"></td>
+					<td><label>Elige un día:</label></td>
+					<td><input type="date" id="fecha" min="" max=""></td>
+				</tr>
+				<tr>
+					<td><br> <input type="button" value="Reservar"
+						onclick="crearCita(this.form)"></td>
 				</tr>
 			</table>
+			<p id="info"></p>
 		</fieldset>
+		<fieldset>
+			<legend>Borrar cita</legend>
+			<label>Introduce el número de la cita que quieres borrar:</label><br>
+			<br> <input type="number" name="idBorrar"> <input
+				type="button" value="Borrar" onclick="borrarCita(this.form)">
+		</fieldset>
+		<p>
+			<input type="button" value="Listar citas" onclick="listarCitas()">
+		</p>
+		<p id="citas"></p>
 	</form>
 </body>
 </html>
